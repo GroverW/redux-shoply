@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Product from './Product';
+import { Link } from 'react-router-dom';
 
 function ProductList() {
   const products = useSelector(store => store.products)
@@ -8,7 +9,9 @@ function ProductList() {
   return (
     <div className="ProductList">
       {products.map(product => (
-        <Product key={product.id} product={product} />
+        <Link to={`/products/${product.id}`} className="productLink">
+          <Product key={product.id} product={product} mode="productList"/>
+        </Link>
       ))}
     </div>
   );

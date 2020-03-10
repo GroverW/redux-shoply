@@ -9,6 +9,13 @@
 
 .Product-text {
   margin: 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.Product-text:hover, .Product-text:active, .Product-text:visited, .productLink:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 .Product-title {
@@ -31,17 +38,28 @@
   border-radius: 10px;
   width: 20px;
   height: 20px;
-  background-color: #FFF;
+  background-color: #666;
   display: inline-block;
   line-height: 1.25em;
   margin-left: 5px;
-  color: #F00;
+  color: #FFF;
+  text-align: center;
 }
 
 .btn {
-  margin-right: 5px;
+  margin: 10px 5px 0 0;
 }
-
+button.remove-link {
+  text-decoration: underline;
+  color: #007bff;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  margin: 10px 5px 0 0;
+}
 .clear {
   clear: both;
 }

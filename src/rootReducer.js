@@ -1,13 +1,18 @@
 import products from './data.json';
-import { ADD_TO_CART, REMOVE_FROM_CART } from './actionTypes';
+import { ADD_TO_CART, REMOVE_FROM_CART, APPLY_DISCOUNT } from './actionTypes';
 
 
 let productList = Object.entries(products.products)
   .map(product => ({ id: product[0], ...product[1] }))
-
+const discountCodes = [
+  {code: 'REMOVE10', discount: .9},
+  {code: 'REMOVE20', discount:.8}, 
+  {code: 'REMOVE30', discount:.7}
+]
 const INITIAL_STATE = {
   cart: {},
-  products: productList
+  products: productList,
+  discount: {current: null, codes:discountCodes}
 }
 
 function rootReducer(state = INITIAL_STATE, action) {
@@ -28,6 +33,9 @@ function rootReducer(state = INITIAL_STATE, action) {
         }
       }
       break;
+    
+    case APPLY_DISCOUNT:
+      return {...state, discount: {...state.discount, current: action.payload.code}}
 
     default:
       return state;

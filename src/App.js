@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import NotFound from './NotFound';
 import NavBar from './NavBar';
+import ProductDetail from './ProductDetail';
 
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
       <div className='App-container'>
         <Switch>
           <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/products">
             <ProductList />
+          </Route>
+          <Route exact path="/products/:id">
+            <ProductDetail />
           </Route>
           <Route exact path="/cart">
             <Cart />
