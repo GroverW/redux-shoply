@@ -1,0 +1,47 @@
+.Product {
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 1px rgba(0,0,0,.1)
+}
+
+.Product-text {
+  margin: 0;
+}
+
+.Product-title {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.Product-image {
+  max-width: 240px;
+  float: left;
+  margin-right: 15px;
+}
+
+.Product-text-container {
+
+}
+
+.numberCircle {
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+  display: inline-block;
+  line-height: 1.25em;
+  margin-left: 5px;
+  color: #F00;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.clear {
+  clear: both;
+}
